@@ -19,6 +19,8 @@ body{
 *{
     box-sizing: border-box;
     font-family: "Open-Sans", sans-serif;
+    text-decoration: none;
+    color: white;
 }
 .container{
     padding: 1rem;
@@ -27,16 +29,50 @@ body{
     border-radius: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 60px 480px;
+    grid-template-rows: 60px 240px 240px;
     grid-template-areas: "header segundo segundo"
-    "header pokedex time ";
+    "header pokedex time "
+    "header viva mario  "                        ;
     gap: .5rem;
+}
+ol{
+    list-style: none;
+    padding: 0;
 }
 .time{
     background-color: blueviolet;   
     border: 1px;
     border-radius: 1rem; 
     grid-area: time;
+    padding: 10px;
+    text-align: center;
+}
+.texto{
+    text-align: left;
+}
+
+.but{
+    margin-top: 40px;
+    background-color: white;
+    color: blueviolet;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.viva{
+    background-color: blueviolet;   
+    border: 1px;
+    border-radius: 1rem; 
+    grid-area: viva;
+    padding: 10px;
+    text-align: center;
+}
+.mario{
+    background-color: blueviolet;   
+    border: 1px;
+    border-radius: 1rem; 
+    grid-area: mario;
+    padding: 10px;
+    text-align: center;
 }
 .header{
     display: flex;
@@ -48,6 +84,8 @@ body{
     border: 1px;
     border-radius: 1rem; 
     grid-area: pokedex;
+    padding: 10px;
+    text-align: center;
 }
 
 .segundotitulo{
@@ -62,11 +100,18 @@ body{
 }
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr 1fr; /* Altera para duas colunas */
-        grid-template-rows: auto; /* Redefine as linhas */
-        grid-template-areas: "header header"
-                            "segundo segundo"
-                            "pokedex time";
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-areas:
+            "header"
+            "segundo"
+            "pokedex"
+            "time"
+            "viva"
+            "mario";
+    }
+
+    .title {
+        font-size: 18px; /* Reduza o tamanho da fonte do título */
     }
 }
 @media (max-width: 768px) {
